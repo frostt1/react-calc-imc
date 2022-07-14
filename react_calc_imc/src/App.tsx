@@ -9,6 +9,13 @@ const App = () => {
     const [heigthField, setHeigthField] = useState<number>(0);
     const [weightField, setWeighField] = useState<number>(0);
 
+    const handleCalculateButton = () => {
+        if (heigthField && weightField) {
+        } else {
+            alert("Digite todos os campos.");
+        }
+    };
+
     return (
         <div>
             <header>
@@ -35,6 +42,7 @@ const App = () => {
                         value={weightField > 0 ? weightField : ""}
                         onChange={(e) => setWeighField(parseFloat(e.target.value))}
                     />
+                    <button onClick={handleCalculateButton}>Calcular</button>
                 </div>
                 <div className={styles.rightSide}>...</div>
             </div>
