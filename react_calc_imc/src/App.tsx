@@ -5,6 +5,8 @@ import styles from "./App.module.css";
 //assets
 import logo from "./assets/powered.png";
 
+import { levels, calculateImc } from "./helpers/imc";
+
 const App = () => {
     const [heigthField, setHeigthField] = useState<number>(0);
     const [weightField, setWeighField] = useState<number>(0);
